@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📢 Report an Issue / Submit Feedback / Request a Feature
+    url: https://github.com/slopsmith/slopsmith/issues/new/choose
+    about: Please submit all issues, feature requests, and bug reports in our central repository.
+  - name: 💬 Come chat with our boisterous and helpful community and devs
+    url: https://discord.gg/TzPVK8fNBm
+    about: Over 2000 people are chatting in Discord and you could be next
