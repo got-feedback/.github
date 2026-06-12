@@ -60,9 +60,9 @@ Or use the workflow dispatch with `enforce_checks: true`.
 
 ---
 
-## Required token for the GitHub Actions workflow
+## Required token for the GitHub Actions workflows
 
-The workflow uses `RULESET_PROPAGATION_TOKEN`. Add this as a secret on the `.github` repo (or as an org secret).
+Workflows use a `PROPAGATION_TOKEN` to make changes to other repositories. Add this as a secret on the `.github` repo (or as an org secret).
 
 **Fine-grained PAT** (recommended): select each target repo and grant `Administration: Read and write`.
 

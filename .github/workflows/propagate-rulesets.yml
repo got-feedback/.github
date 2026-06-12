@@ -35,14 +35,14 @@ jobs:
       - uses: actions/checkout@v4
 
       # gh CLI is pre-installed on ubuntu-latest runners.
-      # RULESET_PROPAGATION_TOKEN must be a fine-grained PAT with
+      # PROPAGATION_TOKEN must be a fine-grained PAT with
       # "Administration: Read and write" on all target repos, or a classic
       # PAT with the `repo` scope. Store it as an org or repo secret named
-      # RULESET_PROPAGATION_TOKEN.
+      # PROPAGATION_TOKEN.
       - name: Apply core + desktop rulesets
         if: inputs.target == 'all' || inputs.target == 'core'
         env:
-          GH_TOKEN: ${{ secrets.RULESET_PROPAGATION_TOKEN }}
+          GH_TOKEN: ${{ secrets.PROPAGATION_TOKEN }}
           ENFORCE_CHECKS: ${{ inputs.enforce_checks }}
         run: |
           bash scripts/apply-ruleset-core.sh
@@ -51,14 +51,14 @@ jobs:
       - name: Apply plugin rulesets (all)
         if: inputs.target == 'all' || inputs.target == 'plugins'
         env:
-          GH_TOKEN: ${{ secrets.RULESET_PROPAGATION_TOKEN }}
+          GH_TOKEN: ${{ secrets.PROPAGATION_TOKEN }}
           ENFORCE_CHECKS: ${{ inputs.enforce_checks }}
         run: bash scripts/apply-ruleset-plugins.sh
 
       - name: Apply plugin ruleset (single repo)
         if: inputs.target == 'single-plugin'
         env:
-          GH_TOKEN: ${{ secrets.RULESET_PROPAGATION_TOKEN }}
+          GH_TOKEN: ${{ secrets.PROPAGATION_TOKEN }}
           ENFORCE_CHECKS: ${{ inputs.enforce_checks }}
         run: |
           if [ -z "${{ inputs.plugin_repo }}" ]; then
