@@ -122,7 +122,7 @@ body:
     id: context
     attributes:
       label: Additional context
-      description: Logs, screenshots, song format (PSARC / sloppak), anything else relevant.
+      description: Logs, screenshots, song format (Sloppak), anything else relevant.
     validations:
       required: false
 ```
