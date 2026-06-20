@@ -1,6 +1,6 @@
 # DevOps Guidelines
 
-Guidelines for contributors to `got-feedback/feedback` and `got-feedback/feedback-desktop`. For plugin-specific rules see [plugins.md](plugins.md).
+Guidelines for contributors to `got-feedback/feedBack` and `got-feedback/feedBack-desktop`. For plugin-specific rules see [plugins.md](plugins.md).
 
 ---
 

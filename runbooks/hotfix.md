@@ -18,13 +18,13 @@ Step-by-step checklist for applying an urgent fix to an already-shipped version.
 ### 1 — Branch from the release branch
 
 ```bash
-# In got-feedback/feedback
+# In got-feedback/feedBack
 git fetch origin
 git checkout release/vX.Y.Z
 git checkout -b hotfix/<issue-number>-short-description
 ```
 
-Do the same in `got-feedback/feedback-desktop` if the fix touches desktop code.
+Do the same in `got-feedback/feedBack-desktop` if the fix touches desktop code.
 
 ### 2 — Fix and PR
 
@@ -51,7 +51,7 @@ Monitor `release.yml` — Docker image should appear on GHCR as `:vX.Y.Z+1`.
 ### 5 — Tag desktop
 
 ```bash
-# In got-feedback/feedback-desktop, on release/vX.Y.Z
+# In got-feedback/feedBack-desktop, on release/vX.Y.Z
 git tag vX.Y.Z+1
 git push origin vX.Y.Z+1
 ```

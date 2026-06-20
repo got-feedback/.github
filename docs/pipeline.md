@@ -99,15 +99,15 @@ Trigger: `workflow_dispatch` on `slopsmith-desktop` with inputs:
 
 ## Plugin-lock pinning
 
-Org plugins (`got-feedback/feedback-plugin-*`) are cloned by the desktop build at build time. For release builds, they are pinned to specific commits recorded in `plugin-lock.json` on the active `release/*` branch. Nightlies always use tip.
+Org plugins (`got-feedback/feedBack-plugin-*`) are cloned by the desktop build at build time. For release builds, they are pinned to specific commits recorded in `plugin-lock.json` on the active `release/*` branch. Nightlies always use tip.
 
 `plugin-lock.json` is created when the release branch is cut (see [runbooks/release.md](../runbooks/release.md)) and can be updated via PR on the release branch if a specific plugin fix needs to ship in the release.
 
 Format:
 ```json
 {
-  "got-feedback/feedback-plugin-notedetect": "abc1234",
-  "got-feedback/feedback-plugin-piano": "def5678",
+  "got-feedback/feedBack-plugin-notedetect": "abc1234",
+  "got-feedback/feedBack-plugin-piano": "def5678",
   "masc0t/slopsmith-plugin-find-more": "ghi9012"
 }
 ```

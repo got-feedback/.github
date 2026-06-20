@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # apply-ruleset-core.sh
 #
-# Applies branch protection to got-feedback/feedback and got-feedback/feedback-desktop.
+# Applies branch protection to got-feedback/feedBack and got-feedback/feedBack-desktop.
 #
 # Two rulesets per repo:
 #   branch-protection    (always active)  — no force push/delete, PR + 1 approval
