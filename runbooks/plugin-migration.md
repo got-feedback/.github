@@ -72,7 +72,7 @@ Change the entry in `scripts/build-common.sh` from the personal account to the o
 <author>/slopsmith-plugin-<name>
 
 # After
-got-feedback/feedback-plugin-<name>
+got-feedback/feedBack-plugin-<name>
 ```
 
 Open a PR on the active `release/*` branch of `slopsmith-desktop`. Also update `plugin-lock.json` to point to the new repo's HEAD commit.

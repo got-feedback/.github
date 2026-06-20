@@ -8,15 +8,15 @@ Slopsmith distinguishes three plugin tiers with different integration levels and
 
 | Tier | Location | Ships via | Versioned with core |
 |---|---|---|---|
-| **Core plugins** (`bundled: true`) | `got-feedback/feedback/plugins/` | Docker image + desktop | Yes — tied to core release |
-| **Org plugins** | `got-feedback/feedback-plugin-*` repos | Desktop only | No — independent cadence |
+| **Core plugins** (`bundled: true`) | `got-feedback/feedBack/plugins/` | Docker image + desktop | Yes — tied to core release |
+| **Org plugins** | `got-feedback/feedBack-plugin-*` repos | Desktop only | No — independent cadence |
 | **Community plugins** | Personal accounts | Desktop only | No — migration target |
 
 ---
 
 ## Core plugins
 
-Core plugins have `"bundled": true` in their `plugin.json`. They live directly in the `got-feedback/feedback` repository under `plugins/` and are the source of truth for what ships in the Docker image.
+Core plugins have `"bundled": true` in their `plugin.json`. They live directly in the `got-feedback/feedBack` repository under `plugins/` and are the source of truth for what ships in the Docker image.
 
 **Governance:** full core contribution workflow applies.
 - PR required, CI must pass, 1 approval required
@@ -34,7 +34,7 @@ Core plugins have `"bundled": true` in their `plugin.json`. They live directly i
 
 ## Org plugins
 
-Org plugins live in their own repos under the `slopsmith` GitHub org (`got-feedback/feedback-plugin-*`). The desktop build clones them at build time via `build-common.sh`.
+Org plugins live in their own repos under the `slopsmith` GitHub org (`got-feedback/feedBack-plugin-*`). The desktop build clones them at build time via `build-common.sh`.
 
 **Governance:** lighter model. Plugin authors own their workflow.
 
@@ -57,7 +57,7 @@ The full core contribution guidelines apply only when a plugin is integrated int
 **Reusable CI workflow:** the `plugin-lint` job is defined as a reusable workflow in this repo. Org plugin repos call it rather than maintaining their own lint logic:
 
 ```yaml
-# .github/workflows/ci.yml in any got-feedback/feedback-plugin-* repo
+# .github/workflows/ci.yml in any got-feedback/feedBack-plugin-* repo
 jobs:
   plugin-lint:
     uses: slopsmith/.github/.github/workflows/plugin-lint.yml@main

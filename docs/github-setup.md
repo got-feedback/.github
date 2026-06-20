@@ -54,7 +54,7 @@ Issue forms gate new issue submissions to a structured format. Disable blank iss
 ### config.yml — disable blank issues
 
 ```yaml
-# .github/ISSUE_TEMPLATE/config.yml  (in got-feedback/feedback and got-feedback/feedback-desktop)
+# .github/ISSUE_TEMPLATE/config.yml  (in got-feedback/feedBack and got-feedback/feedBack-desktop)
 blank_issues_enabled: false
 contact_links:
   - name: Plugin issues

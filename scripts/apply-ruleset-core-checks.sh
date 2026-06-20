@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # apply-ruleset-core-checks.sh
 #
-# Applies the core-only CI checks to got-feedback/feedback:
+# Applies the core-only CI checks to got-feedback/feedBack:
 #   ci / tailwind-fresh
 #   ci / manifest-validation
 #

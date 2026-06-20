@@ -10,7 +10,7 @@ Step-by-step checklist for cutting a Slopsmith release. Follow in order — step
 
 Do this at the beginning of a development cycle, not just before shipping.
 
-- [ ] Open a milestone tracking issue: **"vX.Y.Z milestone"** in `got-feedback/feedback` listing all planned features. Link relevant issues to it.
+- [ ] Open a milestone tracking issue: **"vX.Y.Z milestone"** in `got-feedback/feedBack` listing all planned features. Link relevant issues to it.
 - [ ] Cut `release/vX.Y.Z` from `main` on **core**:
   ```bash
   git checkout main && git pull
@@ -38,14 +38,14 @@ Repeat as needed throughout the development cycle.
 - [ ] Confirm CI is green on `release/vX.Y.Z` in both repos
 - [ ] Tag core:
   ```bash
-  # In got-feedback/feedback, on release/vX.Y.Z
+  # In got-feedback/feedBack, on release/vX.Y.Z
   git tag vX.Y.Z-alpha.1    # or -beta.1, etc.
   git push origin vX.Y.Z-alpha.1
   ```
 - [ ] Monitor `release.yml` on core — Docker image should appear on GHCR within ~5 minutes
 - [ ] Tag desktop with the same tag:
   ```bash
-  # In got-feedback/feedback-desktop, on release/vX.Y.Z
+  # In got-feedback/feedBack-desktop, on release/vX.Y.Z
   git tag vX.Y.Z-alpha.1
   git push origin vX.Y.Z-alpha.1
   ```
